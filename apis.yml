@@ -1,23 +1,58 @@
 aid: beephoton
+
 name: Beephoton
-description: 'Beephoton is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Beephoton (芯晟捷创光电科技) is a high‑tech enterprise founded in June 2017, specializing in photon detection technology and product development. It offers X‑ray detector modules and line‑array cameras for medical imaging, security screening, and industrial applications. The company operates modern clean‑room facilities, holds multiple patents, and is ISO‑9001 certified, serving customers worldwide with advanced photonic solutions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/beephoton/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- PhotonDetection
+- MedicalImaging
+- Industrial
+- Security
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/beephoton-hosts.yml
+- type: DomainSecurity
+  url: security/beephoton-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/beephoton
+  url: https://beephoton.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer program or API documentation was found for beephoton.
+  evidence:
+    - url: https://api.beephoton.com/openapi.json
+      status: 404
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
